@@ -12,6 +12,7 @@ provider "aws" {
 module "webserver_cluster" {
   source = "../../../modules/services/webserver-cluster"
 
+  ami           = "ami-079db87dc4c10ac91"
   cluster_name  = "prod-servers"
   instance_type = "t2.micro"
   max_size      = 5
